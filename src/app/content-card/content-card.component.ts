@@ -52,7 +52,7 @@ export class ContentCardComponent implements OnInit {
   content1: Content;
   content2: Content;
   content3: Content;
-  cList: ContentList;
+  contentList: ContentList;
   constructor() {
     this.content = {
       id: 1,
@@ -81,7 +81,7 @@ export class ContentCardComponent implements OnInit {
         body: 'This is how you write super long code',
         tags: ['Code', 'Jack']
     };
-      this.content3 = {
+    this.content3 = {
           id: 4,
           author: 'Jaidee',
           imgUrl: 'https://pmforthemasses.com/wp-content/uploads/2014/08/camera.png',
@@ -89,17 +89,17 @@ export class ContentCardComponent implements OnInit {
           title: 'How to play Angular for Dummies',
           body: 'This is how you Angular',
           tags: ['Angular', 'Jaidee']
-      };
-    this.cList = new ContentList();
-    this.cList.addContent(this.content);
-    this.cList.addContent(this.content1);
-    this.cList.addContent(this.content2);
-    this.cList.addContent(this.content3);
+    };
+    this.contentList = new ContentList();
+    this.contentList.addContent(this.content);
+    this.contentList.addContent(this.content1);
+    this.contentList.addContent(this.content2);
+    this.contentList.addContent(this.content3);
   }
 
     ngOnInit(): void {
-        this.cList.addContent(this.content);
-        this.cList.contentHtml(0);
+        this.contentList.addContent(this.content);
+        this.contentList.contentHtml(0);
         this.processContent(this.content);
     }
 

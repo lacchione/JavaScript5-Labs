@@ -1,45 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import {Content} from './content-card-helper';
 
-export interface Content {
-    readonly id: number;
-    author: string;
-    imgUrl?: string;
-    type?: string;
-    title: string;
-    body: string;
-    tags?: string[];
-}
-
-class ContentList {
-    private _types: Content[];
-    constructor() {
-        this._types = [];
-    }
-    get types(): Content[] {
-        return this._types;
-    }
-    set types(i: Content[]) {
-        this._types = i;
-    }
-    addContent(content: Content){
-      this._types.push(content);
-    }
-    countContent() {
-        return this._types.length;
-    }
-    contentHtml(i: number) {
-        const siteContent = this.types[i];
-        const outputContent = `ID: ${siteContent.id}
-                               | Author: ${siteContent.author}
-                               | ImgUrl: ${siteContent.imgUrl}
-                               | Type: ${siteContent.type}
-                               | Title: ${siteContent.title}
-                               | Body: ${siteContent.body}
-                               | Tags: ${siteContent.tags}`;
-
-        return outputContent;
-    }
-}
+// class ContentList {
+//     private _types: Content[];
+//     constructor() {
+//         this._types = [];
+//     }
+//     get types(): Content[] {
+//         return this._types;
+//     }
+//     set types(i: Content[]) {
+//         this._types = i;
+//     }
+//     addContent(content: Content){
+//       this._types.push(content);
+//     }
+//     countContent() {
+//         return this._types.length;
+//     }
+//     contentHtml(i: number) {
+//         const siteContent = this.types[i];
+//         const outputContent = `ID: ${siteContent.id}
+//                                | Author: ${siteContent.author}
+//                                | ImgUrl: ${siteContent.imgUrl}
+//                                | Type: ${siteContent.type}
+//                                | Title: ${siteContent.title}
+//                                | Body: ${siteContent.body}
+//                                | Tags: ${siteContent.tags}`;
+//
+//         return outputContent;
+//     }
+// }
 
 @Component({
   selector: 'app-content-card',
@@ -52,7 +43,7 @@ export class ContentCardComponent implements OnInit {
   content1: Content;
   content2: Content;
   content3: Content;
-  contentList: ContentList;
+  // contentList: ContentList;
   constructor() {
     this.content = {
       id: 1,
@@ -90,16 +81,16 @@ export class ContentCardComponent implements OnInit {
           body: 'This is how you Angular',
           tags: ['Angular', 'Jaidee']
     };
-    this.contentList = new ContentList();
-    this.contentList.addContent(this.content);
-    this.contentList.addContent(this.content1);
-    this.contentList.addContent(this.content2);
-    this.contentList.addContent(this.content3);
+    // this.contentList = new ContentList();
+    // this.contentList.addContent(this.content);
+    // this.contentList.addContent(this.content1);
+    // this.contentList.addContent(this.content2);
+    // this.contentList.addContent(this.content3);
   }
 
     ngOnInit(): void {
-        this.contentList.addContent(this.content);
-        this.contentList.contentHtml(0);
+        // this.contentList.addContent(this.content);
+        // this.contentList.contentHtml(0);
         this.processContent(this.content);
     }
 

@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Content} from './content-card/content-card.component';
+import {Content} from './content-card/content-card-helper';
+
 
 @Component({
   selector: 'app-root',

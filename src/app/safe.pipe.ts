@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Content } from './content-card/content-card.component';
+import {Content} from './content-card/content-card-helper';
+
 
 @Pipe({
   name: 'safe'

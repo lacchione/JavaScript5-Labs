@@ -2,4 +2,12 @@
 <!--<p>{{contentList.contentHtml(1)}}</p>-->
 <!--<p>{{contentList.contentHtml(2)}}</p>-->
 <!--<p>{{contentList.contentHtml(3)}}</p>-->
-
+<div class="ContentCard">
+    <p class="id">{{content.id}}</p>
+    <p class="author">{{content.author}}</p>
+    <img class="image" src="{{content.imgUrl}}" alt ="" (click)="displayID(item)">
+    <p class="type">{{content.type}}</p>
+    <p class="title">{{content.title}}</p>
+    <p class="body">{{content.body}}</p>
+    <p class="tags" *ngIf="content.tags">{{content.tags}}</p>
+</div>

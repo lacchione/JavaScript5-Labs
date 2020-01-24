@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {Content} from './content-card/content-card-helper';
 
 
 @Component({
@@ -9,6 +8,5 @@ import {Content} from './content-card/content-card-helper';
 })
 export class AppComponent {
   title = 'JavaScript5-Labs';
-  @Input() content: Content;
 }
 

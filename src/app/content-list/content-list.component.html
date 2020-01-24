@@ -1,13 +1,1 @@
-<div *ngFor="let item of content; first as isFirst; last as isLast;" [class.is-last]="isLast">
-
-    <div class="ContentCard">
-        <p class="id">{{item.id}}</p>
-        <p class="author">{{item.author}}</p>
-        <img class="image" src="{{item.imgUrl}}" alt ="" (click)="displayID(item)">
-        <p class="type">{{item.type}}</p>
-        <p class="title">{{item.title}}</p>
-        <p class="body">{{item.body}}</p>
-        <p class="tags" *ngIf="item.tags">{{item.tags}}</p>
-    </div>
-
-</div>
+<app-content-card *ngFor="let item of content; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item"></app-content-card>

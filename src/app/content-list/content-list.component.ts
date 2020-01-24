@@ -61,8 +61,4 @@ export class ContentListComponent implements OnInit {
 
   ngOnInit() {
   }
-  displayID(item){
-    console.log('This item id is ' + item.id);
-  }
-
 }

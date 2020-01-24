@@ -1,59 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+app-content-card {
 
-.ContentCard {
-
+  display: block;
   border: 1px solid black;
-  padding: 10px;
   margin: 5px;
-  background-color: aquamarine;
-}
-
-.id {
-
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.author {
-
-  font-family: 'Bangers', cursive;
-  font-size: 25px;
-}
-
-.image{
-
-  position: relative;
-  top: -150px;
-  left: 1080px;
-
-}
-
-.body{
-
-  position: relative;
-  top: -300px;
-  left: 1080px;
-}
-
-.type{
-
-  font-size: 35px;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.title {
-
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.tags {
-
-  font-size: 14px;
 }
 
 .is-last {
 
   border: 2px solid black;
+  display:block;
+
 }

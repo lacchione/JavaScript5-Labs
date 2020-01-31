@@ -5,13 +5,13 @@
     <button (click)="itemSearch(itemTitle.value)"> Search for Title </button>
 </section>
 
-<section class="story">
+<section class="storyList">
     <h2> Stories </h2>
-    <app-content-card *ngFor="let item of content | filterTag:'story'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="story"></app-content-card>
+    <app-content-card *ngFor="let item of content | filterTag:'Story'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="story"></app-content-card>
 </section>
 
-<section class="news">
+<section class="newsList">
     <h2> News Articles </h2>
-    <app-content-card *ngFor="let item of content | filterTag:'news'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="news"></app-content-card>
+    <app-content-card *ngFor="let item of content | filterTag:'News'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="news"></app-content-card>
 </section>
 

@@ -9,9 +9,9 @@
     <p class="type">{{content.type}}</p>
     <p class="title">{{content.title}}</p>
     <p class="body">{{content.body}}</p>
-    <p class="tags" *ngIf="content.tags">
-        <div class="tags" *ngFor="let tag of content.tags">
-            <div class="tag">{{tag}}</div>
+    <div class="tags" *ngIf="content.tags">
+        <div class="tags">
+            Tags:{{content.tags}}
         </div>
-    </p>
+    </div>
 </div>

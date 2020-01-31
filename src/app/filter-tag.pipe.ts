@@ -10,7 +10,8 @@ export class FilterTagPipe implements PipeTransform {
   transform(content: Content[], type: string): Content[] {
     this.match = [];
     content.forEach((Story: Content) => {
-        if (Story.type == type) {
+        if (Story.type === type) {
+          console.log(Story);
           this.match.push(Story);
         }
 

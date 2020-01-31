@@ -65,7 +65,7 @@ export class ContentListComponent implements OnInit {
       const output = <HTMLElement> document.querySelector('.findItem > #output');
       let found: boolean = false;
       this.content.forEach(i => {
-          if (i.title == title) {
+          if (i.title === title) {
               found = true;
           }
       });

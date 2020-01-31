@@ -13,10 +13,6 @@ export class ContentCardComponent implements OnInit {
   constructor() {}
 
     ngOnInit(): void {
-        this.processContent(this.content);
-    }
-
-    processContent(c: Content): void {
     }
 
     displayID(item){

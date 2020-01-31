@@ -61,4 +61,20 @@ export class ContentListComponent implements OnInit {
 
   ngOnInit() {
   }
+    itemSearch(title: string): void{
+      const output = <HTMLElement> document.querySelector('.findItem > #output');
+      let found: boolean = false;
+      this.content.forEach(i => {
+          if (i.title == title) {
+              found = true;
+          }
+      });
+      if (found) {
+          output.innerHTML = '"${title}" was found on our list!';
+          output.style.color = 'green';
+      } else {
+          output.innerHTML = '"${title}" was not found on our list!';
+          output.style.color = 'red';
+      }
+    }
 }

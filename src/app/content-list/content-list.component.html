@@ -1,1 +1,17 @@
-<app-content-card *ngFor="let item of content; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item"></app-content-card>
+<section class="itemSearch">
+    <input #itemTitle>
+    <div id="output"></div>
+    <br>
+    <button (click)="itemSearch(itemTitle.value)"> Search for Title </button>
+</section>
+
+<section class="story">
+    <h2> Stories </h2>
+    <app-content-card *ngFor="let item of content | filterTag:'story'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="story"></app-content-card>
+</section>
+
+<section class="news">
+    <h2> News Articles </h2>
+    <app-content-card *ngFor="let item of content | filterTag:'news'; first as isFirst; last as isLast;" [class.is-last]="isLast" [content]="item" class="news"></app-content-card>
+</section>
+

@@ -6,6 +6,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { SafePipe } from './safe.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
 import { FilterTagPipe } from './filter-tag.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FilterTagPipe } from './filter-tag.pipe';
     ContentCardComponent,
     SafePipe,
     ContentListComponent,
-    FilterTagPipe
+    FilterTagPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule

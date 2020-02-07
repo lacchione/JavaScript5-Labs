@@ -74,7 +74,7 @@ export class ContentListComponent implements OnInit {
           output.style.color = 'green';
       } else {
           output.innerHTML = `"${title}" was not found on our list!`;
-          output.style.color = 'red';
+          output.style.color = 'red';t -
       }
     }
 }

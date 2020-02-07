@@ -42,7 +42,7 @@ export class ContentListComponent implements OnInit {
           {
             id: 4,
             author: 'Jaidee',
-            imgUrl: 'https://pmforthemasses.com/wp-content/uploads/2014/08/camera.png',
+            // imgUrl: 'https://pmforthemasses.com/wp-content/uploads/2014/08/camera.png',
             type: 'News',
             title: 'How to play Angular for Dummies',
             body: 'This is how you Angular',
@@ -51,7 +51,7 @@ export class ContentListComponent implements OnInit {
           {
               id: 5,
               author: 'Draven',
-              imgUrl: 'https://pmforthemasses.com/wp-content/uploads/2014/08/camera.png',
+              imgUrl: '',
               type: 'News',
               title: 'Sky is Blue',
               body: 'Why the sky is BLUE',
@@ -74,7 +74,7 @@ export class ContentListComponent implements OnInit {
           output.style.color = 'green';
       } else {
           output.innerHTML = `"${title}" was not found on our list!`;
-          output.style.color = 'red';t -
+          output.style.color = 'red';
       }
     }
 }

@@ -1,11 +1,7 @@
-<!--<p>{{contentList.contentHtml(0)}}</p>-->
-<!--<p>{{contentList.contentHtml(1)}}</p>-->
-<!--<p>{{contentList.contentHtml(2)}}</p>-->
-<!--<p>{{contentList.contentHtml(3)}}</p>-->
 <div class="ContentCard">
     <p class="id">{{content.id}}</p>
     <p class="author">{{content.author}}</p>
-    <img class="image" src="{{content.imgUrl}}" alt ="" (click)="displayID(item)">
+    <img class="image" src="{{ content.imgUrl || 'https://cdn141.picsart.com/302123841347201.jpg?type=webp&to=crop&r=256'}}"  alt ="" (click)="displayID(item)">
     <p class="type">{{content.type}}</p>
     <p class="title">{{content.title}}</p>
     <p class="body">{{content.body}}</p>

@@ -7,6 +7,8 @@ import { SafePipe } from './safe.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
 import { FilterTagPipe } from './filter-tag.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { HighlightDirective } from './highlight.directive';
     SafePipe,
     ContentListComponent,
     FilterTagPipe,
-    HighlightDirective
+    HighlightDirective,
+    CreateContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

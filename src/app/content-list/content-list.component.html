@@ -1,3 +1,7 @@
+<section class="create">
+    <app-create-content [startingId]="content.length" (newContentEvent)="addContentToList($event)"></app-create-content>
+    <br>
+</section>
 <section class="itemSearch">
     <h3> Search </h3>
     <input #itemTitle>

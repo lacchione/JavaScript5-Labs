@@ -13,7 +13,7 @@ export class ContentListComponent implements OnInit {
   constructor() {
       this.content = [
           {
-            id: 1,
+            id:  0,
             author: 'Luca',
             imgUrl: 'http://www.inspiremykids.com/wp-content/uploads/2017/02/gamecontroler2.jpeg',
             type: 'Story',
@@ -22,7 +22,7 @@ export class ContentListComponent implements OnInit {
             tags: ['Video Games', ' Luca']
           },
           {
-            id: 2,
+            id: 1,
             author: 'Will',
             imgUrl: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/book-shop-2-1104657.png',
             type: 'Story',
@@ -31,7 +31,7 @@ export class ContentListComponent implements OnInit {
             tags: ['Books', ' Will']
           },
           {
-            id: 3,
+            id: 2,
             author: 'Jack',
             imgUrl: 'http://icons.iconarchive.com/icons/thehoth/seo/256/seo-web-code-icon.png',
             type: 'Story',
@@ -40,7 +40,7 @@ export class ContentListComponent implements OnInit {
             tags: ['Code', ' Jack']
           },
           {
-            id: 4,
+            id: 3,
             author: 'Jaidee',
             // imgUrl: 'https://pmforthemasses.com/wp-content/uploads/2014/08/camera.png',
             type: 'News',
@@ -49,7 +49,7 @@ export class ContentListComponent implements OnInit {
             tags: ['Angular', ' Jaidee']
           },
           {
-              id: 5,
+              id: 4,
               author: 'Draven',
               imgUrl: '',
               type: 'News',
@@ -76,5 +76,11 @@ export class ContentListComponent implements OnInit {
           output.innerHTML = `"${title}" was not found on our list!`;
           output.style.color = 'red';
       }
+    }
+
+    addContentToList(newContentItem: Content) {
+        this.content.push(newContentItem);
+        const myClonedArray  = Object.assign([], this.content);
+        this.content = myClonedArray;
     }
 }

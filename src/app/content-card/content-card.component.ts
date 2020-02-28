@@ -15,7 +15,7 @@ export class ContentCardComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    displayID(item){
+    displayID(item) {
         console.log('This item id is ' + this.content.id);
     }
 

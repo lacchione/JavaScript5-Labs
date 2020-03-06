@@ -9,6 +9,7 @@ import { FilterTagPipe } from './filter-tag.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import {FormsModule} from '@angular/forms';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from '@angular/forms';
     ContentListComponent,
     FilterTagPipe,
     HighlightDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

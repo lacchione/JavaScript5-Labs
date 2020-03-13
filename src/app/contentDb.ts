@@ -1,6 +1,6 @@
 import {Content} from './content-card/content-card-helper';
 
-export let content: Content [] = [
+export let contentList: Content [] = [
     {
         id:  0,
         author: 'Luca',

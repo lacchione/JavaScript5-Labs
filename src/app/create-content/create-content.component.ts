@@ -29,7 +29,6 @@ export class CreateContentComponent implements OnInit {
 
       const ourPromise = new Promise((success, fail) => {
         this.newContentItem = {
-            id: this.currentId,
             title: title,
             author: author,
             body,
@@ -38,7 +37,6 @@ export class CreateContentComponent implements OnInit {
             tags: [tags]
         };
           if (title && author && body && type) {
-              this.currentId++;
               this.newContentEvent.emit(this.newContentItem);
               this.contentService.addContentObs();
               success(`${title} has been successfully added`);

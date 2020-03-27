@@ -4,10 +4,10 @@
 </section>
 <section class="itemSearch">
     <h3> Search </h3>
-    <input #itemTitle>
+    <input matInput #itemTitle>
     <div id="output"></div>
     <br>
-    <button (click)="itemSearch(itemTitle.value)"> Search for Title </button>
+    <button mat-raised-button color="primary" (click)="itemSearch(itemTitle.value)"> Search for Title </button>
 </section>
 
 <section class="storyList">

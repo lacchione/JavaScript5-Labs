@@ -13,6 +13,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { InMemoryDataService} from './in-memory-data.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,13 @@ import { InMemoryDataService} from './in-memory-data.service';
   ],
   imports: [
     BrowserModule,
+      BrowserAnimationsModule,
       FormsModule,
+      MatButtonModule,
+      MatInputModule,
       HttpClientModule,
       HttpClientInMemoryWebApiModule.forRoot(
-          InMemoryDataService, { dataEncapsulation: false, delay: 1000   })
+          InMemoryDataService, { dataEncapsulation: false, delay: 1000   }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,10 +4,12 @@
 </section>
 <section class="itemSearch">
     <h3> Search </h3>
-    <input matInput #itemTitle>
-    <div id="output"></div>
+    <mat-form-field>
+        <input matInput color="primary" placeholder="Story or News Title" #itemTitle>
+        <div id="output"></div>
+    </mat-form-field>
     <br>
-    <button mat-raised-button color="primary" (click)="itemSearch(itemTitle.value)"> Search for Title </button>
+    <button matRipple mat-raised-button color="primary" (click)="itemSearch(itemTitle.value)"> Search for Title </button>
 </section>
 
 <section class="storyList">

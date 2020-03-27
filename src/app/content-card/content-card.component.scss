@@ -30,7 +30,7 @@
 .body{
 
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 80%;
 }
 
@@ -50,5 +50,10 @@
 .tags {
 
   font-size: 14px;
+}
+
+mat-card-content > mat-divider {
+
+  width: 75%;
 }
 

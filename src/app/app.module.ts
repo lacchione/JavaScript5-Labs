@@ -7,7 +7,7 @@ import { SafePipe } from './safe.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
 import { FilterTagPipe } from './filter-tag.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { CreateContentComponent } from './create-content/create-content.component';
+import { CreateContentComponent, CreateContentDialogComponent } from './create-content/create-content.component';
 import {FormsModule} from '@angular/forms';
 import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule} from '@angular/common/http';
@@ -16,6 +16,10 @@ import { InMemoryDataService} from './in-memory-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatRippleModule} from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,8 +29,9 @@ import {MatInputModule} from '@angular/material/input';
     ContentListComponent,
     FilterTagPipe,
     HighlightDirective,
+    MessagesComponent,
     CreateContentComponent,
-    MessagesComponent
+    CreateContentDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,16 @@ import {MatInputModule} from '@angular/material/input';
       FormsModule,
       MatButtonModule,
       MatInputModule,
+      MatCardModule,
+      MatDividerModule,
+      MatDialogModule,
+      MatRippleModule,
       HttpClientModule,
       HttpClientInMemoryWebApiModule.forRoot(
           InMemoryDataService, { dataEncapsulation: false, delay: 1000   }),
+  ],
+  entryComponents: [
+      CreateContentDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

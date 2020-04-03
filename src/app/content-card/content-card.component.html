@@ -13,6 +13,7 @@
             <div class="tags">
                 Tags:{{content.tags}}
             </div>
-        </div>
+        </div><br>
+        <a [routerLink]="['/content',content.id]" routerLinkActive="active"> View More Details! </a><br>
     </mat-card-content>
 </mat-card>

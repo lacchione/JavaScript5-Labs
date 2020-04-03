@@ -1,0 +1,22 @@
+<section class="detail">
+    <img class="content-image" src="{{ content.imgUrl || 'https://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png' }}"><br>
+    <div class="content-title">
+        {{ content.title }}
+    </div><br>
+    <div class="content-body">
+        {{ content.body }}
+    </div><br>
+    <div class="content-type">
+        <strong>Type:</strong> {{ content.type }}
+    </div>
+    <div class="content-author">
+        <strong>Author:</strong> {{ content.author }}
+    </div><br>
+    <div class="content-tags" *ngIf="content && content.tags">
+        <h4>Tags:</h4>
+        <div *ngFor="let tag of content.tags">
+            {{ tag }}
+        </div>
+    </div><br>
+    <a routerLink="" routerLinkActive="active"> Return to List </a><br>
+</section>

@@ -53,6 +53,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
           InMemoryDataService, { dataEncapsulation: false, delay: 1000   }),
       RouterModule.forRoot(
           [  { path: 'content/:id', component: ContentDetailComponent },
+                    { path: 'content', component: ContentListComponent },
                     { path: '', component: ContentListComponent },
                     { path: '**', component: NotFoundComponent }])
   ],

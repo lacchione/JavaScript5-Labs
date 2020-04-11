@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {LogUpdateService} from './log-update.service';
 
 
 @Component({
@@ -8,5 +9,6 @@ import {Component, Input} from '@angular/core';
 })
 export class AppComponent {
   title = 'JavaScript5-Labs';
+  constructor(private logService: LogUpdateService){ }
 }
 
